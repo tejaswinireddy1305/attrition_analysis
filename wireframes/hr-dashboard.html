@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Dashboard Wireframe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <h3>HRA Dashboard</h3>
+        <nav class="menu">
+          <a class="active" href="#">Dashboard</a>
+          <a href="employees.html">Employees</a>
+          <a href="upload.html">Upload Data</a>
+          <a href="preprocessing.html">Preprocessing</a>
+          <a href="analysis.html">Analysis</a>
+          <a href="reports.html">Reports</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <div class="topbar"><strong>Harsha HR (HR)</strong><span>Search | Notifications | Logout</span></div>
+        <div class="grid kpi-grid">
+          <div class="card"><small>Total Employees</small><h3>3142</h3></div>
+          <div class="card"><small>Attrition Rate</small><h3>14.8%</h3></div>
+          <div class="card"><small>High Risk</small><h3>187</h3></div>
+          <div class="card"><small>Avg Satisfaction</small><h3>4.1 / 5</h3></div>
+        </div>
+        <div class="grid two-col">
+          <section class="panel"><strong>Attrition by Department</strong><div class="placeholder">Bar Chart</div></section>
+          <section class="panel"><strong>Attrition by Job Role</strong><div class="placeholder">Donut Chart</div></section>
+        </div>
+        <section class="panel">
+          <strong>High-Risk Employees</strong>
+          <table>
+            <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Risk</th><th>Action</th></tr></thead>
+            <tbody><tr><td>E1102</td><td>Sarah Adams</td><td>Sales</td><td>92%</td><td>Retention Meeting</td></tr></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

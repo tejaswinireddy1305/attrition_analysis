@@ -1,0 +1,289 @@
+:root {
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --text: #14213d;
+  --muted: #6b778c;
+  --primary: #0f4c81;
+  --accent: #00a7a7;
+  --danger: #f97316;
+  --success: #10b981;
+  --radius: 12px;
+  --shadow: 0 8px 28px rgba(10, 30, 70, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.login-wrap {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+
+.login-brand {
+  background: linear-gradient(145deg, #0f4c81, #12305d);
+  color: #fff;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-brand h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.login-brand p {
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.6;
+  color: #c7daf7;
+}
+
+.login-panel {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.card h2 {
+  margin: 0 0 6px;
+}
+
+.sub {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d8e0ef;
+  padding: 11px 12px;
+  font-size: 0.95rem;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid rgba(0, 167, 167, 0.22);
+  border-color: var(--accent);
+}
+
+.btn {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.error {
+  margin-top: 12px;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 248px 1fr;
+}
+
+.sidebar {
+  background: #0d1b34;
+  color: #c6d1e8;
+  padding: 22px 14px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  padding: 6px 10px 14px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav button {
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav button.active,
+.nav button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.content {
+  padding: 18px 22px 24px;
+}
+
+.topbar {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.topbar-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.kpi-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.panel-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel,
+.kpi,
+.table-panel {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.kpi {
+  padding: 16px;
+}
+
+.kpi small {
+  color: var(--muted);
+}
+
+.kpi h3 {
+  margin: 8px 0 0;
+  font-size: 1.4rem;
+}
+
+.panel {
+  padding: 16px;
+}
+
+.chart-placeholder {
+  margin-top: 12px;
+  background: linear-gradient(180deg, #edf3ff, #f9fbff);
+  border-radius: 10px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  color: #46658f;
+  border: 1px dashed #bfd0ec;
+}
+
+.table-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf1f7;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+th {
+  background: #f7f9fd;
+  color: #365179;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.tag-high {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.tag-med {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.tag-low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+@media (max-width: 1100px) {
+  .kpi-grid,
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .login-wrap,
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+}
